@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271ba472642bb312b86e4af7d3e931e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  tiempoSupervivencia: 10
+  tiempoSupervivencia: 120
   plataformaMeta: {fileID: 872585276}
   spawner: {fileID: 619699445}
   textoTiempo: {fileID: 2115688015}
