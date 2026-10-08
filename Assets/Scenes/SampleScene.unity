@@ -528,6 +528,55 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &619699444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619699446}
+  - component: {fileID: 619699445}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &619699445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619699444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70852e4cd3034faa7b1c6ff9ac1dc4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnerObstaculos
+  prefab: {fileID: 5299749505516620530, guid: c55a5af6d64f3b36084ebce3ffeb785a, type: 3}
+  retrasoInicial: 3
+  intervalo: 2
+  radioArea: 5
+  vidaObstaculo: 6
+--- !u!4 &619699446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619699444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.028349066, y: 0.086413436, z: 0.023787688, w: 0.9955718}
+  m_LocalPosition: {x: -0.3, y: 7.03, z: 0.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 3, y: 10, z: 3}
 --- !u!1 &744471077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,3 +1250,4 @@ SceneRoots:
   - {fileID: 820553701}
   - {fileID: 872585280}
   - {fileID: 1745987434}
+  - {fileID: 619699446}
