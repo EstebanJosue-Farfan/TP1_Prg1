@@ -1,16 +1,35 @@
+using System.Collections;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float recarga = 10f;
+
+    Renderer rend;
+    Collider col;
+
+    void Awake()
     {
-        
+        rend = GetComponent<Renderer>();
+        col = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (!other.CompareTag("Player")) return;
+        PlayerController p = other.GetComponent<PlayerController>();
+        if (p == null || p.BoostActivo) return;
+
+        p.ActivarBoost();
+        StartCoroutine(Recargar());
+    }
+
+    IEnumerator Recargar()
+    {
+        rend.enabled = false;
+        col.enabled = false;
+        yield return new WaitForSeconds(recarga);
+        rend.enabled = true;
+        col.enabled = true;
     }
 }

@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class CamaraSeguimiento : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform objetivo;
+    public Vector3 offset = new Vector3(0, 9, -7);
+    public float suavizado = 5f;
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        if (objetivo == null) return;
+        transform.position = Vector3.Lerp(transform.position, objetivo.position + offset, suavizado * Time.deltaTime);
     }
 }
