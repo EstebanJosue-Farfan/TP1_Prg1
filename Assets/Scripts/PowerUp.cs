@@ -14,10 +14,13 @@ public class PowerUp : MonoBehaviour
         col = GetComponent<Collider>();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) { Intentar(other); }
+    void OnTriggerStay(Collider other) { Intentar(other); }
+
+    void Intentar(Collider other)
     {
-        if (!other.CompareTag("Player")) return;
-        PlayerController p = other.GetComponent<PlayerController>();
+        if (!col.enabled) return;
+        PlayerController p = other.GetComponentInParent<PlayerController>();
         if (p == null || p.BoostActivo) return;
 
         p.ActivarBoost();

@@ -101,13 +101,13 @@ public class PlayerController : MonoBehaviour
         BoostActivo = true;
         multiplicador = multiplicadorBoost;
         rend.material.color = colorBoost;
-        GameManager.Instance.MostrarBoost(true);
+        if (GameManager.Instance != null) GameManager.Instance.MostrarBoost(true);
 
         yield return new WaitForSeconds(duracionBoost);
 
         multiplicador = 1f;
         rend.material.color = colorOriginal;
         BoostActivo = false;
-        GameManager.Instance.MostrarBoost(false);
+        if (GameManager.Instance != null) GameManager.Instance.MostrarBoost(false);
     }
 }
