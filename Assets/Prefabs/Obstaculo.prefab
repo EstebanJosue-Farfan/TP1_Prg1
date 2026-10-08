@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6539809735622600607}
   - component: {fileID: 5066742468115997789}
   - component: {fileID: 6803414010726977906}
+  - component: {fileID: -2749513030454419690}
   m_Layer: 0
   m_Name: Obstaculo
   m_TagString: Untagged
@@ -122,8 +123,8 @@ Rigidbody:
   m_GameObject: {fileID: 5299749505516620530}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 1
+  m_AngularDamping: 5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -140,3 +141,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2749513030454419690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299749505516620530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73211284e426a50b8c9b0914a2b77a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstaculo

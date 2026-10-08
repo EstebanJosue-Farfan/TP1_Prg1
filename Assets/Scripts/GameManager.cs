@@ -79,9 +79,10 @@ public class GameManager : MonoBehaviour
 
     public void Victoria()
     {
-        if (terminado) return;
-        terminado = true;
-        spawner.Detener();
-        textoMensaje.text = "¡VICTORIA!\nPresioná R para reiniciar";
+    if (terminado) return;
+    terminado = true;
+    spawner.Detener();
+    textoMensaje.text = "¡VICTORIA!\nPresioná R para reiniciar";
+    Time.timeScale = 0f;
     }
 }
